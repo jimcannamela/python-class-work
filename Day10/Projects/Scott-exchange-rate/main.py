@@ -1,0 +1,2 @@
+import currency_converter
+currency_converter.get_currency_data()
