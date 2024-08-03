@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Party Blog</h1>
+    <a href="{{url_for('new_post')}}">New post</a>
+        <hr>
+        {% for post in posts %}
+            <p>{{ post.title }}</p>
+            <p>{{ post.content }}</p>
+        {% endfor %}
+        </hr>
+
+    <h2>Astronomy Picture of the Day</h2>
+    <h3>{{ apod_data.title }}</h3>
+    <p>{{ apod_data.date }}</p>
+    <img src="{{ apod_data.url }}" alt="{{ apod_data.title }}">
+</body>
+</html>

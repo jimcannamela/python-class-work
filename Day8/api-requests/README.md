@@ -1,0 +1,1 @@
+place your NASA API KEY in the .env file
